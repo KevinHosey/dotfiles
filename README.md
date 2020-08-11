@@ -1,2 +1,2 @@
 # dotfiles
-pretty self explanatory
+collection of my dotfiles
