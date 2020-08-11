@@ -97,9 +97,23 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias python=/usr/local/bin/python3.7
+alias python=/usr/local/bin/python3.8
 alias pip=/usr/local/bin/pip3
 HISTSIZE=10000000
 SAVEHIST=10000000
 setopt HIST_IGNORE_ALL_DUPS # ignore duplicated commands history list
 setopt SHARE_HISTORY # share command history data
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+alias clear='[ $[$RANDOM % 10] = 0 ] && sl; clear || clear'
+
+# navigation aliases
+alias infra="cd /Users/kevin/dev/BackendInfrastructure/"
+alias cd-code="cd /Users/kevin/code/"
+alias etc="cd /etc && sudo vim hosts"
+alias .ssh="cd ~/.ssh && vim known_hosts"
+
+# git aliases
+alias gpom="git push origin master"
+
