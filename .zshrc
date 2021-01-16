@@ -8,7 +8,8 @@ export ZSH="/Users/kevin/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="macovsky"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -97,7 +98,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias python=/usr/local/bin/python3.8
+alias python=/usr/local/bin/python3.9
 alias pip=/usr/local/bin/pip3
 HISTSIZE=10000000
 SAVEHIST=10000000
@@ -113,7 +114,7 @@ alias infra="cd /Users/kevin/dev/BackendInfrastructure/"
 alias cd-code="cd /Users/kevin/code/"
 alias etc="cd /etc && sudo vim hosts"
 alias .ssh="cd ~/.ssh && vim known_hosts"
-
+alias ls="exa"
 # git aliases
 alias gpom="git push origin master"
 
