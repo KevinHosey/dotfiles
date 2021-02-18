@@ -71,5 +71,7 @@ alias .ssh="cd ~/.ssh && vim known_hosts"
 alias ls="exa"
 
 # git aliases
+alias gs="git status"
 alias gpom="git push origin master"
 
+export ANSIBLE_NOCOWS=1
