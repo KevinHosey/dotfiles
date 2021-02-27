@@ -4,11 +4,6 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/$(whoami)/.oh-my-zsh"
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-# ZSH_THEME="robbyrussell"
 #ZSH_THEME="macovsky"
 ZSH_THEME="cloud"
 
@@ -18,11 +13,9 @@ DISABLE_AUTO_UPDATE="true"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-autosuggestions colored-man-pages python docker zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
@@ -44,11 +37,6 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -64,14 +52,15 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 alias clear='[ $[$RANDOM % 10] = 0 ] && sl; clear || clear'
 
 # navigation aliases
-alias infra="cd /Users/kevin/dev/BackendInfrastructure/"
-alias cd-code="cd /Users/kevin/code/"
-alias etc="cd /etc && sudo vim hosts"
-alias .ssh="cd ~/.ssh && vim known_hosts"
 alias ls="exa"
+alias cdcode="cd /Users/kevin/code/"
+alias hosts="cd /etc && sudo vim hosts"
+alias .ssh="cd ~/.ssh && vim known_hosts"
+alias infra="cd /Users/kevin/dev/BackendInfrastructure/"
 
 # git aliases
 alias gs="git status"
 alias gpom="git push origin master"
+alias gplom="git pull origin master"
 
 export ANSIBLE_NOCOWS=1
