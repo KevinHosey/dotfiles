@@ -4,8 +4,8 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/$(whoami)/.oh-my-zsh"
 
-#ZSH_THEME="macovsky"
-ZSH_THEME="cloud"
+#ZSH_THEME="cloud"
+ZSH_THEME="miloshadzic"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 DISABLE_AUTO_UPDATE="true"
@@ -40,7 +40,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias python=/usr/local/bin/python3.9
+#alias python=/usr/local/bin/python3.8
 alias pip=/usr/local/bin/pip3
 HISTSIZE=10000000
 SAVEHIST=10000000
@@ -57,6 +57,10 @@ alias cdcode="cd /Users/kevin/code/"
 alias hosts="cd /etc && sudo vim hosts"
 alias .ssh="cd ~/.ssh && vim known_hosts"
 alias infra="cd /Users/kevin/dev/BackendInfrastructure/"
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
 
 # git aliases
 alias gs="git status"
@@ -64,3 +68,25 @@ alias gpom="git push origin master"
 alias gplom="git pull origin master"
 
 export ANSIBLE_NOCOWS=1
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+export PATH="/usr/local/opt/python@3.8/bin:$PATH"
