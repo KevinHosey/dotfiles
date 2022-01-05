@@ -40,7 +40,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#alias python=/usr/local/bin/python3.8
+alias python=/usr/local/bin/python3.9
 alias pip=/usr/local/bin/pip3
 HISTSIZE=10000000
 SAVEHIST=10000000
@@ -48,6 +48,8 @@ setopt HIST_IGNORE_ALL_DUPS # ignore duplicated commands history list
 setopt SHARE_HISTORY # share command history data
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 
 alias clear='[ $[$RANDOM % 10] = 0 ] && sl; clear || clear'
 
@@ -66,6 +68,8 @@ alias .....="cd ../../../.."
 alias gs="git status"
 alias gpom="git push origin master"
 alias gplom="git pull origin master"
+alias gpomn="git push origin main"
+alias gplomn="git pull origin main"
 
 export ANSIBLE_NOCOWS=1
 
