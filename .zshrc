@@ -53,7 +53,7 @@ alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 
 alias clear='[ $[$RANDOM % 10] = 0 ] && sl; clear || clear'
 
-# navigation aliases
+# Navigation
 alias ls="exa"
 alias cdcode="cd /Users/kevin/code/"
 alias hosts="cd /etc && sudo vim hosts"
@@ -64,12 +64,21 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
-# git aliases
+# Git
 alias gs="git status"
 alias gpom="git push origin master"
 alias gplom="git pull origin master"
 alias gpomn="git push origin main"
 alias gplomn="git pull origin main"
+
+# Docker
+alias dc="docker-compose"
+alias dcu="docker-compose up -d --build"
+alias dcd="docker-compose down -v"
+alias dps="docker ps"
+
+# Miscellaneous
+alias weather="curl wttr.in/berlin"
 
 export ANSIBLE_NOCOWS=1
 
