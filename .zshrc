@@ -37,11 +37,7 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-alias python=/usr/local/bin/python3.9
-alias pip=/usr/local/bin/pip3
+
 HISTSIZE=10000000
 SAVEHIST=10000000
 setopt HIST_IGNORE_ALL_DUPS # ignore duplicated commands history list
@@ -49,15 +45,17 @@ setopt SHARE_HISTORY # share command history data
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 
-alias clear='[ $[$RANDOM % 10] = 0 ] && sl; clear || clear'
+alias python=/usr/local/bin/python3.9
+alias pip=/usr/local/bin/pip3
 
 # Navigation
 alias ls="exa"
 alias cdcode="cd /Users/kevin/code/"
 alias hosts="cd /etc && sudo vim hosts"
 alias .ssh="cd ~/.ssh && vim known_hosts"
+alias scripts="/Users/kevin/code/scripts"
+alias cdll="cd /Users/kevin/code/learning-log/"
 alias infra="cd /Users/kevin/dev/BackendInfrastructure/"
 alias ..="cd .."
 alias ...="cd ../.."
@@ -76,9 +74,14 @@ alias dc="docker-compose"
 alias dcu="docker-compose up -d --build"
 alias dcd="docker-compose down -v"
 alias dps="docker ps"
+alias di="docker images"
 
 # Miscellaneous
+alias cde="conda deactivate"
 alias weather="curl wttr.in/berlin"
+alias uc="bat /Users/kevin/code/scripts/useful-commands.sh"
+alias clear='[ $[$RANDOM % 10] = 0 ] && sl; clear || clear'
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 
 export ANSIBLE_NOCOWS=1
 
