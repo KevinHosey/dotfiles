@@ -1,0 +1,33 @@
+# Navigation
+alias ls="exa"
+alias cdcode="cd /Users/kevin/code/"
+alias hosts="cd /etc && sudo vim hosts"
+alias .ssh="cd ~/.ssh && vim known_hosts"
+alias scripts="/Users/kevin/code/scripts"
+alias cdll="cd /Users/kevin/code/learning-log/"
+alias infra="cd /Users/kevin/dev/BackendInfrastructure/"
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+# Git
+alias gs="git status"
+alias gpom="git push origin master"
+alias gplom="git pull origin master"
+alias gpomn="git push origin main"
+alias gplomn="git pull origin main"
+
+# Docker
+alias dc="docker-compose"
+alias dcu="docker-compose up -d --build"
+alias dcd="docker-compose down -v"
+alias dps="docker ps"
+alias di="docker images"
+
+# Miscellaneous
+alias cde="conda deactivate"
+alias weather="curl wttr.in/berlin"
+alias uc="bat /Users/kevin/code/scripts/useful-commands.sh"
+alias clear='[ $[$RANDOM % 10] = 0 ] && sl; clear || clear'
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
