@@ -29,8 +29,9 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # Navigation
 alias ls="exa"
 alias cdcode="cd /Users/kevin/code/"
-alias hosts="cd /etc && sudo vim hosts"
-alias .ssh="cd ~/.ssh && vim known_hosts"
+alias hosts="sudo vim /etc/hosts"
+alias khosts="vim ~/.ssh/known_hosts"
+alias .ssh="vim ~/.ssh/known_hosts"
 alias scripts="/Users/kevin/code/scripts"
 alias cdll="cd /Users/kevin/code/learning-log/"
 alias infra="cd /Users/kevin/dev/BackendInfrastructure/"
@@ -57,6 +58,10 @@ alias di="docker images"
 alias cde="conda deactivate"
 alias weather="curl wttr.in/berlin"
 alias uc="bat /Users/kevin/code/scripts/useful-commands.sh"
+alias cuc="sed '${N}q;d' /Users/kevin/code/scripts/useful-commands.sh | pbcopy"
+alias cn="sed '3q;d' /Users/kevin/code/scripts/useful-commands.sh | pbcopy"
+alias cm="sed '4q;d' /Users/kevin/code/scripts/useful-commands.sh | pbcopy"
+alias cma="sed '5q;d' /Users/kevin/code/scripts/useful-commands.sh | pbcopy"
 alias clear='[ $[$RANDOM % 10] = 0 ] && sl; clear || clear'
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 
@@ -67,4 +72,9 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 
 export PATH="/usr/local/opt/python@3.8/bin:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
 
