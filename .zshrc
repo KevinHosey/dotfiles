@@ -3,6 +3,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/$(whoami)/.oh-my-zsh"
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
 ZSH_THEME="miloshadzic"
 
@@ -29,6 +30,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # Navigation
 alias ls="exa"
 alias cdcode="cd /Users/kevin/code/"
+alias abbey="cd /Users/kevin/code/abbeyfolk-website"
 alias hosts="sudo vim /etc/hosts"
 alias khosts="vim ~/.ssh/known_hosts"
 alias .ssh="vim ~/.ssh/known_hosts"
@@ -42,6 +44,7 @@ alias .....="cd ../../../.."
 
 # Git
 alias gs="git status"
+alias gp="git pull"
 alias gpom="git push origin master"
 alias gplom="git pull origin master"
 alias gpomn="git push origin main"
